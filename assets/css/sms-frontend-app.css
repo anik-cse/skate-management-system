@@ -1,0 +1,127 @@
+/* * File: assets/css/sms-frontend-app.css
+ * This file contains the styles for the frontend shortcode app.
+ * It's loaded by class-sms-shortcode.php
+ */
+:root {
+    --bg-primary: #1f2937; /* gray-800 */
+    --bg-secondary: #374151; /* gray-700 */
+    --bg-tertiary: #4b5563; /* gray-600 */
+    --text-primary: #f9fafb; /* gray-100 */
+    --text-secondary: #d1d5db; /* gray-300 */
+    --accent-blue: #3b82f6;
+    --accent-green: #22c55e;
+    --accent-yellow: #eab308;
+    --accent-red: #ef4444;
+}
+#skate-app-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    /* Reset styles that might be inherited from theme */
+    box-sizing: border-box;
+}
+#skate-app-container *, #skate-app-container *::before, #skate-app-container *::after {
+    box-sizing: inherit;
+}
+.sms-tab {
+    transition: all 0.2s ease-in-out;
+}
+.sms-tab.active {
+    border-bottom-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+.sms-tab:not(.active) {
+    color: var(--text-secondary);
+}
+.sms-stat-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--bg-tertiary);
+}
+.sms-button {
+    transition: all 0.2s ease-in-out;
+    border: none;
+    border-radius: 0.375rem; /* rounded-md */
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.sms-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.sms-button-primary { background-color: var(--accent-blue); }
+.sms-button-primary:hover { background-color: #2563eb; }
+.sms-button-green { background-color: var(--accent-green); }
+.sms-button-green:hover { background-color: #16a34a; }
+.sms-button-yellow { background-color: var(--accent-yellow); }
+.sms-button-yellow:hover { background-color: #d97706; }
+.sms-button-red { background-color: var(--accent-red); }
+.sms-button-red:hover { background-color: #dc2626; }
+.sms-button-gray { background-color: var(--bg-tertiary); }
+.sms-button-gray:hover { background-color: #6b7280; }
+
+/* Modal */
+.sms-modal-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+.sms-modal-content {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-tertiary);
+    padding: 1.5rem;
+    border-radius: 0.5rem; /* rounded-lg */
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.sms-modal-input {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--bg-tertiary);
+    color: var(--text-primary);
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.5rem;
+}
+/* QR Scanner */
+#sms-qr-reader {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px dashed var(--bg-tertiary);
+    border-radius: 0.5rem;
+}
+#html5-qrcode-button-camera-stop {
+    background-color: var(--accent-red) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.375rem !important;
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+}
+ #html5-qrcode-button-camera-start {
+    background-color: var(--accent-green) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.375rem !important;
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+}
+#html5-qrcode-anchor-scan-type-change {
+     text-decoration: none !important;
+     color: var(--accent-blue) !important;
+     font-size: 0.875rem !important;
+}
+.sms-hidden { display: none; }
+
